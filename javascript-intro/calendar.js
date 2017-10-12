@@ -13,6 +13,7 @@ function processSelection() {
     days = 30;
   }
   createCalendar(days, choice);
+  drawCircles();
 }
 
 function createCalendar(days, choice) {
@@ -26,19 +27,24 @@ function createCalendar(days, choice) {
 }
 
 createCalendar(31,'January');
+drawCircles();
 
-//draw some nice circles
-var WIDTH = document.documentElement.clientWidth;
-var HEIGHT = document.documentElement.clientHeight;
+function drawCircles() {
+  //draw some nice circles
+  var WIDTH = document.documentElement.clientWidth;
+  var HEIGHT = document.documentElement.clientHeight;
 
-var canvas = document.querySelector("canvas");
-var ctx = canvas.getContext('2d');
-for (var i = 0; i < 100; i++) {
-  ctx.beginPath();
-  ctx.fillStyle = 'rgba(255,0,0,0.5)';
-  ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-  ctx.fill();
+  var canvas = document.querySelector("canvas");
+  var ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (var i = 0; i < 100; i++) {
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+    ctx.fill();
+  }
 }
+
 
 function random(number) {
   return Math.floor(Math.random()*number);
