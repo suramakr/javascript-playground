@@ -10,7 +10,7 @@ body {
 }
 
 .output * {
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 .output ul {
@@ -18,7 +18,7 @@ body {
 }
 
 .output li {
-  display: inline-block;
+   display: inline-block;
    float: left;
    width: 25%;
    border: 2px solid white;
