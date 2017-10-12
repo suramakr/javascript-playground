@@ -1,0 +1,31 @@
+body {
+  margin: 3px;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+}
+
+.calendarmonths {
+  background-color: orange;
+}
+
+.output * {
+  box-sizing: border-box;
+}
+
+.output ul {
+  padding-left: 0;
+}
+
+.output li {
+  display: inline-block;
+   float: left;
+   width: 25%;
+   border: 2px solid white;
+   padding: 5px;
+   height: 40px;
+   background-color: #4A2DB6;
+   background: -webkit-linear-gradient(top,
+     #cdeb8e 0%,#b0ca34 100%);
+   color: white;
+  }
